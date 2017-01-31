@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	  <title>YourAPP!</title>
+	  <title>CookieAPP!</title>
 	  <meta name="viewport" content="width=device-width">
 	  <link rel="stylesheet" href="css/main.css">
 	  <link rel="stylesheet" href="css/Normalize.css"> 
+	  <link rel="stylesheet" href="css/font-awesome.min.css">
 	  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	</head>
 	<body>
 		<div id="top-nav">
 			<header id="main-header"> <!-- top  -->
-				<div id="app-text">YourApp<sup>&trade;</sup></div>
+				<div id="app-text">Cookie<sup>&trade;</sup></div>
 				<div id="alert"><img src="icons/icon-bell.svg" alt=""></div>
 				<div id="line"></div>
+				
 				<!-- user info -->
 				<img id="me" src="image/me.jpg" alt="user image">
 				<div id="jun">Jun Chai</div>
 			</header>
 		</div>
 		
-		<!-- Page wrapper / side nav Start -->
+		<!-- Page wrapper / side nav Start -->	
 		<div id="nav-wrapper" class="wrapper">
-			<nav>
+			<div id="side-col">
 				<ul id="side-nav">
 					<li>
 						<a href="#" alt="icon for dashboard">
@@ -33,36 +35,167 @@
 					<li><img src="icons/icon-visits.svg" alt="icon for statistics on visits"></li>
 					<li><img src="icons/icon-settings.svg" alt="icon for setting"></li>
 				</ul>
-			</nav>
-		
-		
-		<!-- title & search bar -->
-		<div id="title-search">
-			<div id="title">Dashboard</div>
-			<form id="search">
-					<input type="text" name="search" placeholder="Search">
-					<img id="search-icon" src="icons/icon-search.svg" alt="search-icon">
-			</form>
-		</div>
-		<!-- ALERT -->
+			</div>
+			
+			
+			<!-- MAIN CONTAINER FOR PAGE INFO -->
+			
+			<div id="main-container">
+				<!-- TITLE & SEARCH BAR-->
+				<div id="title-search">
+					<div id="title">Dashboard</div>
+					<form id="search">
+							<input type="text" name="search" placeholder="Search">
+							<img id="search-icon" src="icons/icon-search.svg" alt="search-icon">
+					</form>
+				</div>
+			
+			
+			<!-- ALERT -->
+				<div id="alert-container">
+					<p><strong>Alert!</strong> You got one new message in your inbox.</p>
+					<i class="fa fa-times fa" aria-hidden="true"></i>
+				</div>
+				
+				<!-- CHARTS -->
+				<div id="line-chart">
+					<canvas id="myLineChart"></canvas>
+				</div>
+				
+				<div id="two-graphs">
+					<div id="bar-chart">
+						<canvas id="myBarChart"></canvas>
+					</div>
+					
+					<div id="pie-chart">
+						<h4>MOBILE TRAFFIC</h4>
+						<canvas id="myPieChart"></canvas>
+					</div>
+				</div>
+		<!-- SOCIAL MEDIA VIEWS -->
+				<div id="social-stat">SOCIAL STATS</div>
+					<div id="social-media">	
+						<!-- twitter -->
+						<div id="twitter">
+							<div class="img-container">
+								<img class="social-icons" src="icons/icon-twitter.svg">
+							</div>
+							<div class="social-name">
+								<div>Twitter</div>
+								<div class="numbers">10,345</div>
+							</div>
+						</div>
+						
+						<!-- facebook -->
+						<div id="facebook">
+							<div class="img-container">
+								<img class="social-icons" src="icons/icon-facebook.svg">
+							</div>
+							<div class="social-name">
+								<div>Facebook</div>
+								<div class="numbers">8,739</div>
+							</div>
+						</div>
+						
+						<!-- google plus -->
+						<div id="google">
+							<div class="img-container">
+								<img class="social-icons" src="icons/icon-google-plus.svg">
+							</div>
+							<div class="social-name">
+								<div>Google Plus</div>
+								<div class="numbers">2,530</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- end main-container div -->	
+			<!-- NEW MEMBER -->
+			<div id="four-panel">
+				<div class="bottom-container" id="member">
+					<span id="new-member">NEW MEMBER</span>
+					<ul class="member-list">
+						<li>
+							<div>Jun Chai</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>John Smith</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>Wok Man</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>J.K Fowling</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+					</ul>	
+				</div>
+				
+			<!-- RECENT ACTIVITY -->
+				<div class="bottom-container" id="activity">
+					<span id="recent-activity">RECENT ACTIVITY</span>
+					<ul class="member-list">
+						<li>
+							<div>Jun Chai</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>John Smith</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>Wok Man</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+						<li>
+							<div>J.K Fowling</div>
+							<div>email</div>
+							<div>date</div>
+						</li>
+					</ul>	
+				</div>
 	
-		<!-- charts -->
-		<canvas id="myLineChart" width="400" height="400"></canvas>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		</div> 
-		
-		<!-- page wrapper END -->
-		<script src="chart/chart.js"></script>
+			<!-- MESSAGE USER -->
+				<div class="bottom-container" id="form">
+					<span id="recent-activity">MESSAGE USER</span>
+						<form>
+							<fieldset>
+								<textarea id="search-user" placeholder="Search for User"></textarea>
+								<textarea id="message-user" placeholder="Message for User"></textarea>
+								<button type="submit">Send</button>
+						  	</fieldset>
+						</form>
+				</div>
+			
+				<!-- SETTING -->
+				<div class="bottom-container" id="setting">
+					<span id="recent-activity">SETTING</span>
+					
+				</div>
+			</div>
+		</div> <!-- end wrapper div -->
+				
+				
+				<!-- page wrapper END -->
+			
+			<!-- FOOTER -->
+			<footer>
+				
+			</footer>
+			
+			<!-- JS scripts -->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/Chart.min.js"></script>
+		<script src="js/mycharts.js"></script>
 	</body>	
 </html>

@@ -1,8 +1,10 @@
-html,body {
+html, body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden; 
+	
 }
 /****-------------------------------
 		Top Nav Style
@@ -57,15 +59,18 @@ html,body {
 /****-------------------------------
 	Main page Style -- search bar
 			-------------------------------****/	
-.wrapper,
-#title-search  {
+
+.wrapper {
 	display: flex;
 	flex-direction: row;
 }
 #title-search {
-	justify-content: flex-end;
 	width: 100%;
 	height: 70px;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 #title {
 	font-family: 'Raleway', sans-serif;
@@ -136,13 +141,13 @@ input {
 	Main page Style -- side nav bar
 			-------------------------------****/	
 
-nav {
-	display: inline-block;
-}
+
 #side-nav {
+	display: inline-block;
 	background-color: #402f6c;
 	padding: 0 30px;
 	margin: 0 auto;	
+	height: 100%;
 }
 #side-nav > li {
 	padding-top: 10px;
@@ -161,7 +166,197 @@ nav {
 	opacity: 1;
 }
 
+/****-------------------------------
+	Main page Style -- Main page content - Alert
+			-------------------------------****/
+#main-container {
+	height: 100%;
+	width: 100%;
+}
+#alert-container {
+	background-color: #6c6492;
+	display: inline-block;
+	
+	height: 20px;
+	width: 90%;
+	
+	padding: 6px 5px;
+	margin: 20px 30px 10px 25px;
+	
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px gray;
+}
+#alert-container > p {
+	height: 10px;
+	margin: 0 auto;
+	padding: 0 0 0 6px;
+	color: white;
+}
+.fa-times {
+	position: relative;
+	left: 98%;
+	bottom: 12px;
+	
+	padding: 5px;
+	
+	color: white;
+}
 
+/****-------------------------------
+	Main page Style -- Main page content - Chart
+			-------------------------------****/
+#line-chart {
+	padding: 40px 20px;
+}
+#myLineChart {
+	width: 80% !important;
+	height: 600px !important;
+	
+	margin-left: 5%;
+}
+#two-graphs {
+	display: flex;
+	flex-direction: row;
+}
+#bar-chart,
+#pie-chart {
+	border: 1px solid #dedbdb;
+	padding: 20px 100px;
+	width: 600px;
+	height: 300px;
+	
+}
+#myBarChart {
+	width: 100% !important;
+	height: auto !important;
+}
+#pie-chart > h4 {
+	margin-top: 0;
+	position: relative;
+	right: 40px;
+}
+	
+#myPieChart {
+	width: 45% !important;
+	height: auto !important;
+	
+	margin-left: 25%;
+	
+	position: relative;
+	bottom: 30px;
+	
+}
+/****-------------------------------
+	Main page Style -- Main page content - SSN
+			-------------------------------****/
+#social-stat {
+	margin: 25px 0 0 2%;
+	font-weight: bold;
+	color: #727272;
+}
+#social-media {
+	margin: 25px 0 30px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#twitter,
+#facebook,
+#google {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	border: 2px solid #e2e1e1;
+	border-radius: 7px;
+	
+	margin: 0 3%;
+	padding: 30px 100px 30px 50px;
+	
+	background-color:#fbfbfb;
+}
+#twitter > .img-container,
+#facebook > .img-container,
+#google > .img-container {
+	border: 1px solid #918e8e;
+	padding: 10px 12px; /* not working */
+	border-radius: 50px;
+	background-color: #6c6492;
+}
+#twitter > div,
+#facebook > div,
+#google > div {
+	padding-left: 30px;
+}
+
+#twitter > div > div,
+#facebook > div > div,
+#google > div > div {
+	width: 100px;
+}
+.social-icons {
+	height: 50px;
+	width: 50px;
+	fill: white;
+}
+#twitter > div > img {
+	position: relative;
+	top: 8px;
+}
+#google > div > img {
+	position: relative;
+	top: 3px;
+}
+.social-name {
+	position: relative;
+	top: 5px;
+}
+.social-name  div:first-child {
+	font-size: 20px;
+	font-weight: bold;
+	color: #6c6492;
+	width: 120px !important;
+	
+}
+.social-name div:nth-child(2) {
+	font-size: 30px;
+	color: black;
+}
+
+/****-------------------------------
+	Main page Style -- Main page content - 4-panel
+			-------------------------------****/
+#four-panel,
+.bottom-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.bottom-container {
+	padding: 2% 5% 10% 5%;
+	border: 1px solid black;
+}
+ul {
+	list-style: none;
+}	
+fieldset {
+	display: flex;
+	flex-direction: column;
+	border-style: none;
+}		
+#search-user {
+	width: 600px;
+	height: 25px;
+	resize: none;
+	
+	margin: 15px 0;
+}
+#message-user {
+	width: 600px;
+	height: 200px;
+}
+			
 /****-------------------------------
 	Media Query Style -- search bar
 			-------------------------------****/	
