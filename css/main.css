@@ -4,6 +4,7 @@ html, body{
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden; 
+	overflow-y: scroll;
 	
 }
 /****-------------------------------
@@ -143,7 +144,6 @@ input {
 
 
 #side-nav {
-	display: inline-block;
 	background-color: #402f6c;
 	padding: 0 30px;
 	margin: 0 auto;	
@@ -326,35 +326,85 @@ input {
 /****-------------------------------
 	Main page Style -- Main page content - 4-panel
 			-------------------------------****/
-#four-panel,
-.bottom-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+#four-panel{
+	border-top: 1px solid #ccc;
+}
+.fix {*zoom:1;}
+.fix:after {
+	display: block;
+	content: "clear";
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+	 
 }
 .bottom-container {
-	padding: 2% 5% 10% 5%;
-	border: 1px solid black;
+	float: left;
+	width: 50%;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 30px;
 }
-ul {
+.bottom-container.item {
+	width: 90%;
+	margin: 10px auto 0;
+}
+.member-list li {
 	list-style: none;
-}	
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+}
+
+.member-list li div:nth-child(1) {
+	padding: 10px 0;
+}
+.member-list li div:nth-child(2) {
+	display: inline-block;
+}
+.member-list li div:nth-child(3) {
+	float: left;
+	position: relative;
+	left: 95%;
+	bottom: 10px;
+}
 fieldset {
 	display: flex;
 	flex-direction: column;
 	border-style: none;
-}		
+}
+fieldset button {
+	margin-top:10px;
+	border:0 none;
+	background-color:#6c6492;
+	color:#fff;padding:5px 15px;
+	border-radius:6px;
+	font-size:1em;
+}
+fieldset input[type=text],
+fieldset textarea {
+	padding:5px;
+	box-sizing:border-box;
+	border-radius:6px;
+	line-height:30px;
+	border-color:#6c6492;
+	font-size: 1em;
+}
+fieldset input[type=text]{line-height:30px;}
 #search-user {
-	width: 600px;
-	height: 25px;
+	width: 35vw;
+	/*height: 25px;*/
+	height:40px;
 	resize: none;
-	
 	margin: 15px 0;
+	overflow: hidden;
 }
 #message-user {
-	width: 600px;
+	width: 35vw;
 	height: 200px;
+	resize:none;
 }
 			
 /****-------------------------------
