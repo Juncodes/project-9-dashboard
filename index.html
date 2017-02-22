@@ -6,6 +6,7 @@
 	  <link rel="stylesheet" href="css/main.css">
 	  <link rel="stylesheet" href="css/Normalize.css"> 
 	  <link rel="stylesheet" href="css/font-awesome.min.css">
+	  <link rel="stylesheet" href="css/css-toggle-switch-master/dist/toggle-switch-px.css">
 	  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	</head>
@@ -26,10 +27,8 @@
 		<div id="nav-wrapper" class="wrapper">
 			<div id="side-col">
 				<ul id="side-nav">
-					<li>
-						<a href="#" alt="icon for dashboard">
-							<img src="icons/icon-dashboard.svg">
-						</a>
+					<li class="fix"> 
+						<img id="member" src="icons/icon-dashboard.svg">
 					</li>
 					<li><img src="icons/icon-members.svg" alt="icon for member"></li>
 					<li><img src="icons/icon-visits.svg" alt="icon for statistics on visits"></li>
@@ -46,15 +45,15 @@
 					<div id="title">Dashboard</div>
 					<form id="search">
 							<input type="text" name="search" placeholder="Search">
-							<img id="search-icon" src="icons/icon-search.svg" alt="search-icon">
+							<img id="search-icon" src="icons/icon-search.svg" alt="search-icon" style="	top: 10px; right: 50px;">
 					</form>
 				</div>
 			
 			
 			<!-- ALERT -->
-				<div id="alert-container">
+				<div id="alert-container" class="fix">
 					<p><strong>Alert!</strong> You got one new message in your inbox.</p>
-					<i class="fa fa-times fa" aria-hidden="true"></i>
+					<img src="image/x.png" class="close" id="x" alt="img of X for closing alert">
 				</div>
 				
 				<!-- CHARTS -->
@@ -116,28 +115,28 @@
 							<span>NEW MEMBER</span>
 							<ul class="member-list">
 								<li class="fix">
-									<img src="">
+									<img src="image/me.jpg">
 									<div>Jun Chai</div>
-									<div>email</div>
-									<div>date</div>
+									<div>jun@cookieapp.com</div>
+									<div>02/15/2017</div>
 								</li>
 								<li class="fix">
-									<img src="">
+									<img src="image/john%20smith.jpg">
 									<div>John Smith</div>
-									<div>email</div>
-									<div>date</div>
+									<div>JSmith@cookieapp.com</div>
+									<div>02/15/2017</div>
 								</li>
 								<li class="fix">
-									<img src="">
-									<div>Wok Man</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/whaley.jpg">
+									<div>Whales Miley</div>
+									<div>whalesmiley@cookieapp.com</div>
+									<div>02/13/2017</div>
 								</li>
 								<li class="fix">
-									<img src="">
-									<div>J.K Fowling</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/Fow%20Oh.jpg">
+									<div>Yelo Oh</div>
+									<div>Yelo@cookieapp.com</div>
+									<div>02/10/2017</div>
 								</li>
 							</ul>	
 						</div>
@@ -148,28 +147,40 @@
 							<span id="recent-activity">RECENT ACTIVITY</span>
 							<ul class="member-list fix">
 								<li class="fix">
-									<img src="">
-									<div>Jun Chai</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/me.jpg">
+									<div>Jun Chai sleeping at home</div>
+									<div>2 hours ago</div>
+									<div>
+										<a href="image/right.png">
+										<img class="arrow" src="image/right.png" style="height:30px; width:30px;"></a>
+									</div>
 								</li>
 								<li class="fix">
-									<img src="">
-									<div>John Smith</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/john%20smith.jpg">
+									<div>John Smith likes COOKIES on cookieAPP!</div>
+									<div>1 day ago</div>
+									<div>
+										<a href="image/right.png">
+										<img class="arrow" src="image/right.png" style="height:30px; width:30px; "></a>
+									</div>
 								</li>
 								<li class="fix">
-									<img src="">
-									<div>Wok Man</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/whaley.jpg">
+									<div>Whales Miley commented on recent trip to the ocean</div>
+									<div>2 days ago</div>
+									<div>
+										<a href="image/right.png">
+										<img class="arrow" src="image/right.png" style="height:30px; width:30px;"></a>
+									</div>
 								</li>
 								<li class="fix">
-									<img src="">
-									<div>J.K Fowling</div>
-									<div>email</div>
-									<div>date</div>
+									<img src="image/Fow%20Oh.jpg">
+									<div>Yelo Oh liked the page yellow</div>
+									<div>1 week ago</div>
+									<div >
+										<a href="image/right.png">
+										<img class="arrow" src="image/right.png" style="height:30px; width:30px;"></a>
+									</div>
 								</li>
 							</ul>	
 						</div>	
@@ -193,6 +204,44 @@
 					<div class="bottom-container">
 						<div class="bottom-container-item">
 							<span id="recent-activity">SETTING</span>
+							<label class="switch-light switch-candy fix" onclick="" style="margin-top: 30px;">
+								<input type="checkbox">
+								<strong>
+									Sent Email Notifications
+								</strong>
+								
+								<span class="toggle-switch" style="width:40%;">
+									<span>Off</span>
+								    <span>On</span>
+									<a></a>
+								</span>
+							</label>
+							<label class="switch-light switch-candy fix" onclick="" style="margin-top: 30px;">
+								<input type="checkbox">
+								<strong>
+									Set Profile to Public
+								</strong>
+								
+								<span class="toggle-switch" style="width:40%;">
+									<span>Off</span>
+								    <span>On</span>
+									<a></a>
+								</span>
+							</label>
+							<div class="dropdown">
+								<select>
+								    <option value="" disabled="disabled" selected="selected">Select Time Zone</option>
+								    <option value="1">New York</option>
+								    <option value="2">Chicago</option>
+								    <option value="2">California</option>
+								    <option value="2">Beijing</option>
+									<option value="2">Germany</option>
+								</select>
+							</div>
+							<div>
+								<button class="first-button" type="submit">Save</button>
+								<button class="second-button"type="submit">Cancel</button>
+							</div>
 						</div>	
 					</div>
 				</div>
@@ -209,8 +258,14 @@
 			</footer>
 			
 			<!-- JS scripts -->
-		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
 		<script src="js/Chart.min.js"></script>
 		<script src="js/mycharts.js"></script>
+		
+		<script>
+			$('.close').click(function() {
+				$("#alert-container").fadeOut();
+			});
+		</script> 
 	</body>	
 </html>
